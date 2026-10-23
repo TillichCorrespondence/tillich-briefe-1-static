@@ -656,7 +656,7 @@
             
             
             <!-- JOURNAL ARTICLE -->
-            <xsl:when test="@type = 'journalArticle'">
+            <xsl:when test="@type = 'journalArticle' or @type='bookSection'">
                 
                 <span class="author">
                     <xsl:choose>
