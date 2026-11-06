@@ -23,14 +23,8 @@
                 <dt>geboren</dt>
                 <dd>
                     <xsl:value-of select="./tei:birth/tei:date/text()"/>
-                    <xsl:if test="./tei:birth//tei:placeName">, <a>
-                        <xsl:attribute name="href">
-                            <xsl:value-of
-                                select="concat(data(./tei:birth/tei:settlement[1]/@key[1]), '.html')"
-                            />
-                        </xsl:attribute><xsl:value-of
+                    <xsl:if test="./tei:birth//tei:placeName">, <xsl:value-of
                             select="./tei:birth//tei:placeName[1]/text()"/>
-                    </a>
                     </xsl:if>
                 </dd>
             </xsl:if>
@@ -39,11 +33,9 @@
                 <dt>gestorben</dt>
                 <dd>
                     <xsl:value-of select="./tei:death/tei:date/text()"/>
-                    <xsl:if test="./tei:death//tei:placeName">, <a>
-                        <xsl:attribute name="href"><xsl:value-of
-                            select="concat(data(./tei:death/tei:settlement[1]/@key[1]), '.html')"
-                        /></xsl:attribute><xsl:value-of
-                            select="./tei:death//tei:placeName[1]/text()"/></a></xsl:if>
+                    <xsl:if test="./tei:death//tei:placeName">, <xsl:value-of
+                            select="./tei:death//tei:placeName[1]/text()"/>
+                    </xsl:if>
                 </dd>
             </xsl:if>
             

@@ -29,6 +29,9 @@ uv run pyscripts/add_correspContext.py
 echo "make calendar data"
 uv run pyscripts/make_calendar_data.py
 
+echo "remove not mentioned entities"
+uv run pyscripts/remove_not_mentioned_entities.py
+
 # echo "creating some cidoc"
 # uv run pyscripts/make_cidoc.py
 
